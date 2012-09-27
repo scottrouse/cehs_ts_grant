@@ -1,9 +1,14 @@
 name = CEHS Timesheet Grant
 core = 7.x
 package = CEHS Timesheet
+php = 5.2.4
 version = 7.x-1.0-alpha1
 project = cehs_ts_grant
 dependencies[] = features
+dependencies[] = field_collection
+dependencies[] = number
 dependencies[] = taxonomy
 features[features_api][] = api:1
+features[field][] = field_collection_item-field_ts_grant-field_ts_grant_percent
+features[field][] = field_collection_item-field_ts_grant-field_ts_grant_ref
 features[taxonomy][] = grant
