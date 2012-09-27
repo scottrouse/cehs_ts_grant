@@ -1,0 +1,36 @@
+<?php
+/**
+ * @file
+ * cehs_ts_grant.features.taxonomy.inc
+ */
+
+/**
+ * Implements hook_taxonomy_default_vocabularies().
+ */
+function cehs_ts_grant_taxonomy_default_vocabularies() {
+  return array(
+    'grant' => array(
+      'name' => 'Grant',
+      'machine_name' => 'grant',
+      'description' => 'A Grant for Payroll designation.',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+  );
+}
